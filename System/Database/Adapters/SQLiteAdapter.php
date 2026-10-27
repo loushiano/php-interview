@@ -80,18 +80,16 @@ class SQLiteAdapter extends DBConnectionParameters implements DBAdapterInterface
              VALUES (?, ?, ?, ?, 1)'
         );
         $clients = array(
-            array('Harbor & Pine Foods', 'Lina Okonkwo', 'lina.okonkwo@harborpine.example', 'Canada'),
-            array('Northline Logistics', 'James Whitaker', 'james.whitaker@northline.example', 'United Kingdom'),
-            array('Al Noor Medical Supplies', 'Fatima Al Hashimi', 'fatima.hashimi@alnoor.example', 'United Arab Emirates'),
-            array('Cedar Ridge Manufacturing', 'Priya Shah', 'priya.shah@cedarridge.example', 'United States'),
-            array('Blue Atlas Textiles', 'Miguel Costa', 'miguel.costa@blueatlas.example', 'Portugal'),
-            array('Qasr Facilities', 'Omar Al Saud', 'omar.alsaud@qasrfm.example', 'Saudi Arabia'),
-            array('Lumen Grid Energy', 'Helena Vogel', 'helena.vogel@lumengrid.example', 'Germany'),
-            array('Maris Cold Storage', 'Sanne de Vries', 'sanne.devries@maris.example', 'Netherlands'),
-            array('Atlas School Group', 'Rami Nasser', 'rami.nasser@atlasschools.example', 'Jordan'),
-            array('Kinara Packaging', 'Amina Wanjiku', 'amina.wanjiku@kinara.example', 'Kenya'),
-            array('Solstice Labs', 'Aoife Brennan', 'aoife.brennan@solstice.example', 'Ireland'),
-            array('Wadi Stone & Cement', 'Hassan Al Balushi', 'hassan.balushi@wadistone.example', 'Oman'),
+            array('Test Client 1', 'Test Client 1', 'Test Contact 1', 'test.contact1@test.example', 'Canada'),
+            array('Test Client 2', 'Test Client 2', 'Test Contact 2', 'test.contact2@test.example', 'United Kingdom'),
+            array('Test Client 3', 'Test Client 3', 'Test Contact 3', 'test.contact3@test.example', 'United States'),
+            array('Test Client 4', 'Test Client 4', 'Test Contact 4', 'test.contact4@test.example', 'United Kingdom'),
+            array('Test Client 5', 'Test Client 5', 'Test Contact 5', 'test.contact5@test.example', 'Canada'),
+            array('Test Client 6', 'Test Client 6', 'Test Contact 6', 'test.contact6@test.example', 'United States'),
+            array('Test Client 7', 'Test Client 7', 'Test Contact 7', 'test.contact7@test.example', 'United Kingdom'),
+            array('Test Client 8', 'Test Client 8', 'Test Contact 8', 'test.contact8@test.example', 'Canada'),
+            array('Test Client 9', 'Test Client 9', 'Test Contact 9', 'test.contact9@test.example', 'United States'),
+            array('Test Client 10', 'Test Client 10', 'Test Contact 10', 'test.contact10@test.example', 'United Kingdom'),
         );
         foreach ($clients as $client) {
             $insertClient->execute($client);

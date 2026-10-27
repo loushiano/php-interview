@@ -38,9 +38,9 @@ class dashboardModel extends mainModel {
     public function updateClientName($clientId, $name) {
         $this->db->query(
             'UPDATE tbl_client
-             SET client_name = ?
+             SET client_name = ?, contact_name = ?
              WHERE client_id = ? AND status_id = 1',
-            array($name, (int) $clientId)
+            array($name, null, (int) $clientId)
         );
         return $this->getClient($clientId);
     }
