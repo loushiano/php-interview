@@ -1,5 +1,7 @@
 RewriteEngine on
 
+RewriteRule ^data/ - [F,L]
+
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-d
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-l
