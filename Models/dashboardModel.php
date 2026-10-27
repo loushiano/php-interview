@@ -25,4 +25,24 @@ class dashboardModel extends mainModel {
         );
     }
 
+    public function getClient($clientId) {
+        $rows = $this->db->preparedStmt(
+            'SELECT client_id, client_name, contact_name, email, country
+             FROM tbl_client
+             WHERE client_id = ? AND status_id = 1',
+            array((int) $clientId)
+        );
+        return isset($rows[0]) ? $rows[0] : null;
+    }
+
+    public function updateClientName($clientId, $name) {
+        $this->db->query(
+            'UPDATE tbl_client
+             SET client_name = ?
+             WHERE client_id = ? AND status_id = 1',
+            array($name, (int) $clientId)
+        );
+        return $this->getClient($clientId);
+    }
+
 }
